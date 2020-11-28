@@ -25,6 +25,19 @@ $(document).ready(function() {
         prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='./assets/img/prev_video.png' alt=''></button>",
         nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='./assets/img/next_video.png' alt=''></button>",
     });
+    $('.submenu_slider').slick({
+        dots: false,
+        slidesToShow: 5,
+        prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='./assets/img/prev_video.png' alt=''></button>",
+        nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='./assets/img/next_video.png' alt=''></button>",
+    });
+    $('.footer h3').click(function(event) {
+        if ($('.element_footer').hasClass('use_mobi')) {
+            $('.footer h3').not($(this)).removeClass('active');
+            $('.footer ul').not($(this).next()).slideUp(300);
+        }
+        $(this).toggleClass('active').next().slideToggle(300);
+    });
     $('.slider_video:not(.no-slide) .item').click(function() {
         $(this).find(".thumbnail").remove();
     });
