@@ -23,6 +23,12 @@ $(document).ready(function() {
         dots: false,
         slidesToShow: 1,
     });
+    $('.slider_video_hotro').slick({
+        dots: false,
+        slidesToShow: 3,
+        prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='./assets/img/next2.png' alt=''></button>",
+        nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='./assets/img/next1.png' alt=''></button>",
+    });
     $('.slider_video').slick({
         dots: false,
         slidesToShow: 1,
