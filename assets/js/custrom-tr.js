@@ -19,6 +19,10 @@ $(document).ready(function() {
         dots: false,
         slidesToShow: 1,
     });
+    $('.section_slider_product').slick({
+        dots: false,
+        slidesToShow: 1,
+    });
     $('.slider_video').slick({
         dots: false,
         slidesToShow: 1,
