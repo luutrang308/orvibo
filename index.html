@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css">
     <script src="./assets/js/jquery.min.js" type="text/javascript"></script>
@@ -25,9 +26,14 @@
             <div class="row">
                 <div class="logo">
                     <a href="" title=""><img src="./assets/img/logo.png" alt=""></a>
+                    <div class="menu-bar">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
-                <ul class="menu_pc">
-                    <li>
+                <ul class="menu_pc header_use_mobi">
+                    <li class="">
                         <a href="" title="">GIỚI THIỆU</a>
                         <div class="mega_menu">
                             <ul class="submenu">
@@ -36,7 +42,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="" title="">SẢN PHẨM</a>
                         <div class="mega_menu">
                             <ul class="submenu">
@@ -330,7 +336,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="" title="">HỖ TRỢ</a>
                         <div class="mega_menu">
                             <ul class="submenu">
@@ -341,7 +347,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="" title="">GIẢI PHÁP</a>
                         <div class="mega_menu">
                             <ul class="submenu">
@@ -352,7 +358,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="" title="">TIN TỨC</a>
                         <div class="mega_menu">
                             <ul class="submenu">
@@ -363,10 +369,10 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="" title="">LIÊN HỆ</a>
                     </li>
-                    <li>
+                    <li class="">
                         <div class="form_search_header">
                             <span class="icon_search"><img src="./assets/img/search_header.png" alt=""></span>
                         </div>
@@ -543,26 +549,30 @@
             </div>
 
             <div class="slider_video" id="slide_video_intro_home">
-                <div class="item" src="https://www.youtube.com/watch?v=wAQnEYVcOq4">
+                <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=wAQnEYVcOq4" class="item">
                     <div class="thumbnail">
                         <img src="./assets/img/thumbnail.png" alt="">
-                        <img src="./assets/img/play.png" alt="" class="play_video">
+                        <span class="play_video_item circle_video">
+                            <img src="./assets/img/play.png" alt="" class="play_video">
+                        </span>
                     </div>
                     <div class="video_box">
                         <iframe width="560" height="315" src="" class="iframeVideoIntro videoPopupFirstTime" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <!-- iframe -->
-                </div>
-                <div class="item" src="https://www.youtube.com/watch?v=wAQnEYVcOq4">
+                </a>
+                <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=wAQnEYVcOq4" class="item">
                     <div class="thumbnail">
                         <img src="./assets/img/thumbnail.png" alt="">
-                        <img src="./assets/img/play.png" alt="" class="play_video">
+                        <span class="play_video_item circle_video">
+                            <img src="./assets/img/play.png" alt="" class="play_video">
+                        </span>
                     </div>
                     <div class="video_box">
                         <iframe width="560" height="315" src="" class="iframeVideoIntro videoPopupFirstTime" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <!-- iframe -->
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -676,6 +686,7 @@
     <a href="#" class="icon_backtotop" title=""> <img src="./assets/img/backtotop.png"> </a>
 </div>
 
+<script src="./assets/fancybox/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="./assets/js/wow.min.js"></script>
 <script type="text/javascript" src="./assets/js/custrom-tr.js"></script>
 

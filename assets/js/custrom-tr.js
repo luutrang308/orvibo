@@ -28,6 +28,14 @@ $(document).ready(function() {
         slidesToShow: 3,
         prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='./assets/img/next2.png' alt=''></button>",
         nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='./assets/img/next1.png' alt=''></button>",
+        responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
     });
     $('.slider_video').slick({
         dots: false,
@@ -48,42 +56,47 @@ $(document).ready(function() {
         }
         $(this).toggleClass('active').next().slideToggle(300);
     });
-    $('.slider_video:not(.no-slide) .item').click(function() {
-        $(this).find(".thumbnail").remove();
+    $('.menu_pc>li').click(function(event) {
+        if ($('.menu_pc').hasClass('header_use_mobi')) {
+            $('.menu_pc>li').not($(this)).removeClass('active');
+            /*$('.menu_pc>li .mega_menu').not($(this).next()).slideUp(300);*/
+        }
+        $(this).toggleClass('active');
     });
-    /*$('#slide_video_intro_home').slick({
-        dots: true,
-        slidesToShow: 1,
-        prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='/themes/introduce/w3ni890/img/11.png' alt=''></button>",
-        nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='/themes/introduce/w3ni890/img/10.png' alt=''></button>",
-        responsive: [{
-            breakpoint: 765,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false,
-                prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='/themes/introduce/w3ni890/img/55.png' alt=''></button>",
-                nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='/themes/introduce/w3ni890/img/54.png' alt=''></button>",
-            }
-        }, ]
+    $('.menu-bar').click(function(){
+        $('.menu_pc.header_use_mobi').fadeToggle('slow');
+    });
+    
+    /*$('.slider_video:not(.no-slide) .item').click(function() {
+        $(this).find(".thumbnail").remove();
     });*/
-    // On before slide change
-    $('#slide_video_intro_home').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        var $slickCurrent = $('#slide_video_intro_home').find('.slick-slide[data-slick-index=' + currentSlide + ']');
-        var $slickNext = $('#slide_video_intro_home').find('.slick-slide[data-slick-index=' + nextSlide + ']');
-        $slickCurrent.find('.iframeVideoIntro')[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
-        $slickNext.find(".thumbnail").remove();
-        $slickNext.find('.iframeVideoIntro')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    $(document).ready(function($) {
+      var $filter = $('.section_header_pc');
+      var $filterSpacer = $('<div />', {
+        "class": "vnkings-spacer",
+        "height": $filter.outerHeight()
     });
-
-    $('#slide_video_intro_home').on('click', '.item', function() {
-        $(this).find(".thumbnail").remove();
-        $(this).find('.iframeVideoIntro')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+      if ($filter.size())
+        {
+            $(window).scroll(function ()
+            {
+              if (!$filter.hasClass('hd-mb') && $(window).scrollTop() > $filter.offset().top)
+              {
+                $filter.before($filterSpacer);
+                $filter.addClass("hd-mb");
+                }
+                else if ($filter.hasClass('hd-mb')  && $(window).scrollTop() < $filterSpacer.offset().top)
+                {
+                    $filter.removeClass("hd-mb");
+                    $filterSpacer.remove();
+                }
+            });
+        }
     });
+    
 
 });
-var myWindow;
-$(document).ready(function(){
-   myWindow = window.open("", "", "width=576, height=auto");
-}) 
+
+document.querySelector(".menu-bar").onclick = function(){
+  this.classList.toggle('open');
+}
