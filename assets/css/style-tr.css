@@ -65,6 +65,9 @@
 .section_header_pc .container .row > .menu_pc > li > a:hover {
   text-decoration: none;
 }
+.section_header_pc .container .row > .menu_pc > li:last-child .mega_menu {
+  padding: 13px 0;
+}
 
 .element_slider {
   width: 100%;
@@ -1322,6 +1325,12 @@
 .section_trainghiem_background .anhnen img {
   max-width: 100%;
 }
+.section_trainghiem_background .title_default h2 {
+  margin-bottom: 20px;
+}
+.section_trainghiem_background .title_default p {
+  margin-bottom: 0;
+}
 
 .element_single_img {
   margin-top: 35px;
@@ -1476,7 +1485,6 @@
   margin: 60px 0;
 }
 .element_solution_col .box_solution .img {
-  width: 48%;
   height: 580px;
   overflow: hidden;
 }
@@ -1519,8 +1527,11 @@
   margin-top: 20px;
   color: #383838;
 }
+.element_solution_col .box_solution_left .img {
+  width: 47%;
+}
 .element_solution_col .box_solution_right .content {
-  width: 49%;
+  width: 48%;
 }
 .element_solution_col .box_solution_right .content h3 {
   font-family: SVN-Poppins;
@@ -1564,6 +1575,9 @@
   border-radius: 100%;
   left: 0;
   top: 10px;
+}
+.element_solution_col .box_solution_right .img {
+  width: 47%;
 }
 
 .section_solution_page_background {
@@ -2351,7 +2365,7 @@
   padding-bottom: 50px;
 }
 .section-info-page .container {
-  margin-top: -23%;
+  margin-top: -19.6%;
 }
 
 .bg-img {
@@ -2397,7 +2411,7 @@
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 0px 25px 25px 25px;
+  padding: 0 25px;
 }
 .info-fw .item-fw .title:before {
   position: absolute;
@@ -2462,6 +2476,9 @@
   transition: 0.6s;
 }
 .info-fw .item-fw:hover .description-fw p {
+  color: #fff;
+}
+.info-fw .item-fw:hover .description-fw p strong {
   color: #fff;
 }
 
