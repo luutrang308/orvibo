@@ -1594,3 +1594,14 @@
 		width: 19%;
 	}
 }
+@media screen and (min-width: 1200px) {
+	.title_default_img {
+	    text-align: center;
+	    width: 75%;
+	    margin: auto;
+	}
+	.title_default {
+	    width: 75%;
+	    margin: auto;
+	}
+}
