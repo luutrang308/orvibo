@@ -1405,6 +1405,7 @@
 .img_baobi .item {
   width: 32%;
   overflow: hidden;
+  margin: 0 10px;
 }
 .img_baobi .item img {
   width: 100%;
